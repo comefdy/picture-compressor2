@@ -1,0 +1,227 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #1d1d1f;
+    background-color: #fbfbfd;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 头部样式 */
+header {
+    text-align: center;
+    margin: 3rem 0 4rem;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    color: #1d1d1f;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 21px;
+    color: #86868b;
+    font-weight: 400;
+}
+
+/* 上传区域样式 */
+.upload-area {
+    background-color: #fff;
+    border: 2px dashed #d2d2d7;
+    border-radius: 18px;
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.upload-area:hover {
+    border-color: #0071e3;
+    background-color: #f5f5f7;
+}
+
+.upload-hint img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.upload-hint p {
+    font-size: 17px;
+    color: #1d1d1f;
+    margin-bottom: 0.5rem;
+}
+
+.upload-hint label {
+    color: #0071e3;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.support-text {
+    color: #86868b;
+    font-size: 14px;
+    margin-top: 0.75rem;
+}
+
+/* 压缩设置样式 */
+.compress-settings {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 18px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.quality-control {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.quality-control label {
+    font-size: 17px;
+    color: #1d1d1f;
+    font-weight: 500;
+}
+
+input[type="range"] {
+    flex: 1;
+    height: 6px;
+    -webkit-appearance: none;
+    background: #d2d2d7;
+    border-radius: 3px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #0071e3;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+#qualityValue {
+    font-size: 17px;
+    color: #0071e3;
+    font-weight: 500;
+    min-width: 4rem;
+}
+
+/* 预览区域样式 */
+.preview-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.original-image,
+.compressed-image {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.original-image h3,
+.compressed-image h3 {
+    font-size: 21px;
+    color: #1d1d1f;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.original-image img,
+.compressed-image img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+.image-info {
+    color: #86868b;
+    font-size: 14px;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f5f5f7;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* 下载按钮样式 */
+.download-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #0071e3;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #0077ED;
+    transform: translateY(-1px);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 32px;
+    }
+    
+    header p {
+        font-size: 17px;
+    }
+    
+    .preview-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .upload-area,
+    .compress-settings,
+    .original-image,
+    .compressed-image {
+        padding: 1.5rem;
+    }
+} 
